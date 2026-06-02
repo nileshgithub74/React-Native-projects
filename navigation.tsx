@@ -5,6 +5,7 @@ import OTPScreen from '@/Screen/OTP/OTP';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '@/Screen/Home/HomeScreen';
+import SearchScreen from '@/Screen/Search/SearchScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,6 +18,7 @@ const NavigationScreen = () => {
         <Stack.Screen name="signup" component={SingupScreen} options={{ headerShown: false }} />
         <Stack.Screen name="otp" component={OTPScreen}  />
         <Stack.Screen name="home" component={HomeScreen}  options={{headerShown : false}} />
+        <Stack.Screen name="search" component={SearchScreen} options={{headerShown: false}}  />
       </Stack.Navigator>
     </NavigationContainer>
   );
