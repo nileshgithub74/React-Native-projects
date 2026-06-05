@@ -33,12 +33,11 @@ export const specialities: Speciality[] = [
 ];
 
 // -------------------- DOCTORS --------------------
-
 export const doctors: Doctor[] = [
   {
     id: 1,
     name: "Dr. Sarah Thompson",
-    speciality: "1",
+    speciality: "Dermatology",
     phone: "123-456-7890",
     email: "sarah.thompson@medikart.com",
     rating: 4.8,
@@ -50,7 +49,7 @@ export const doctors: Doctor[] = [
   {
     id: 2,
     name: "Dr. James Wilson",
-    speciality: "2",
+    speciality: "Cardiology",
     phone: "123-456-7891",
     email: "james.wilson@medikart.com",
     rating: 4.6,
@@ -62,7 +61,7 @@ export const doctors: Doctor[] = [
   {
     id: 3,
     name: "Dr. Emily Carter",
-    speciality: "3",
+    speciality: "Orthopedic Surgeon",
     phone: "123-456-7892",
     email: "emily.carter@medikart.com",
     rating: 4.7,
@@ -74,7 +73,7 @@ export const doctors: Doctor[] = [
   {
     id: 4,
     name: "Dr. Michael Brown",
-    speciality: "4",
+    speciality: "Neurology",
     phone: "123-456-7893",
     email: "michael.brown@medikart.com",
     rating: 4.5,
@@ -86,7 +85,7 @@ export const doctors: Doctor[] = [
   {
     id: 5,
     name: "Dr. Olivia Davis",
-    speciality: "5",
+    speciality: "Pediatrics",
     phone: "123-456-7894",
     email: "olivia.davis@medikart.com",
     rating: 4.9,
@@ -98,7 +97,7 @@ export const doctors: Doctor[] = [
   {
     id: 6,
     name: "Dr. David Miller",
-    speciality: "6",
+    speciality: "Ophthalmology",
     phone: "123-456-7895",
     email: "david.miller@medikart.com",
     rating: 4.4,
@@ -110,7 +109,7 @@ export const doctors: Doctor[] = [
   {
     id: 7,
     name: "Dr. Sophia Anderson",
-    speciality: "7",
+    speciality: "Endocrinology",
     phone: "123-456-7896",
     email: "sophia.anderson@medikart.com",
     rating: 4.7,
@@ -122,7 +121,7 @@ export const doctors: Doctor[] = [
   {
     id: 8,
     name: "Dr. Daniel Thomas",
-    speciality: "8",
+    speciality: "Gastroenterology",
     phone: "123-456-7897",
     email: "daniel.thomas@medikart.com",
     rating: 4.3,
@@ -134,7 +133,7 @@ export const doctors: Doctor[] = [
   {
     id: 9,
     name: "Dr. Ava Martinez",
-    speciality: "9",
+    speciality: "Psychiatry",
     phone: "123-456-7898",
     email: "ava.martinez@medikart.com",
     rating: 4.6,
@@ -146,7 +145,7 @@ export const doctors: Doctor[] = [
   {
     id: 10,
     name: "Dr. William Garcia",
-    speciality: "10",
+    speciality: "Urology",
     phone: "123-456-7899",
     email: "william.garcia@medikart.com",
     rating: 4.2,

@@ -1,8 +1,9 @@
-import { View, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Dimensions, StyleSheet } from 'react-native';
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 const { width } = Dimensions.get('window');
+const CARD_WIDTH = (width - 48) / 2; // 2 cards per screen minus padding and gap
 
 interface DoctorCardProps {
   name: string;
@@ -17,7 +18,7 @@ const DoctorCard = ({ name, rating, image, fees, speciality, id }: DoctorCardPro
   const navigation = useNavigation<any>();
 
   const handlePress = () => {
-    navigation.navigate('doctorDetail', {
+    navigation.navigate('appointment', {
       doctor: { name, rating, image, fees, speciality, id }
     });
   };
@@ -25,43 +26,54 @@ const DoctorCard = ({ name, rating, image, fees, speciality, id }: DoctorCardPro
   return (
     <TouchableOpacity 
       className="bg-white rounded-2xl overflow-hidden shadow-lg mr-4 mb-4"
+      style={styles.card}
       onPress={handlePress}
     >
       <View className="relative">
         <Image 
           source={{ uri: image }} 
-          className="w-full h-64 bg-gray-200"
+          style={styles.cardImage}
+          className="bg-gray-200"
           resizeMode="cover"
         />
-        <View className="absolute top-3 right-3 bg-white/95 rounded-full px-3 py-1.5 flex-row items-center shadow-md">
-          <Text className="text-yellow-500 text-sm mr-1">⭐</Text>
-          <Text className="text-gray-800 font-semibold text-sm">{rating}</Text>
+        <View className="absolute top-2 right-2 bg-white/95 rounded-full px-2 py-1 flex-row items-center shadow-md">
+          <Text className="text-yellow-500 text-xs mr-0.5">⭐</Text>
+          <Text className="text-gray-800 font-semibold text-xs">{rating}</Text>
         </View>
       </View>
 
-      <View className="p-4">
-        <Text className="text-gray-900 text-lg font-bold mb-1" numberOfLines={1}>
+      <View className="p-3">
+        <Text className="text-gray-900 text-sm font-bold mb-1" numberOfLines={1}>
           {name}
         </Text>
         
         {speciality && (
-          <Text className="text-gray-500 text-sm mb-3" numberOfLines={1}>
+          <Text className="text-gray-500 text-xs mb-2" numberOfLines={1}>
             {speciality}
           </Text>
         )}
 
-        <View className="flex-row items-center justify-between mt-2">
-          <View>
-            <Text className="text-gray-500 text-xs mb-1">Consultation Fee</Text>
-            <Text className="text-emerald-600 text-xl font-bold">₹{fees}</Text>
+        <View className="flex-row items-center justify-between mt-1">
+          <View className="flex-1 mr-2">
+            <Text className="text-gray-500" style={{ fontSize: 10 }}>Fee</Text>
+            <Text className="text-emerald-600 text-base font-bold">₹{fees}</Text>
           </View>
-          <View className="bg-blue-500 rounded-full px-5 py-2.5">
-            <Text className="text-white text-sm font-semibold">Book</Text>
-          </View>
+         
         </View>
       </View>
     </TouchableOpacity>
   );
 };
+
+const styles = StyleSheet.create({
+  card: {
+    width: CARD_WIDTH,
+    maxWidth: CARD_WIDTH,
+  },
+  cardImage: {
+    width: CARD_WIDTH,
+    height: CARD_WIDTH ,
+  },
+});
 
 export default DoctorCard;

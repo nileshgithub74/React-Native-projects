@@ -8,6 +8,11 @@ import HomeScreen from '@/Screen/Home/HomeScreen';
 import SearchScreen from '@/Screen/Search/SearchScreen';
 import DoctorsList from '@/component/Doctorlist/DoctorsList';
 import DoctorDetail from '@/Screen/DoctorDetail/DoctorDetail';
+import AppointmentForm from '@/Screen/Appointment/AppointmentForm';
+import AppointmentSchedule from '@/Screen/Appointment/AppointmentSchedule';
+import AppointmentSuccess from '@/Screen/Appointment/AppointmentSuccess';
+import AppointmentDetail from '@/Screen/Appointment/AppointmentDetail';
+import VideoCall from '@/Screen/VideoCall/VideoCall';
 
 const Stack = createNativeStackNavigator();
 
@@ -23,6 +28,11 @@ const NavigationScreen = () => {
         <Stack.Screen name="search" component={SearchScreen} options={{ headerShown: false }} />
         <Stack.Screen name="doctorList" component={DoctorsList} options={{ headerShown: false }} />
         <Stack.Screen name="doctorDetail" component={DoctorDetail} options={{ headerShown: false }} />
+        <Stack.Screen name="appointment" component={AppointmentForm} options={{ headerShown: false }} />
+        <Stack.Screen name="appointmentSchedule" component={AppointmentSchedule} options={{ headerShown: false }} />
+        <Stack.Screen name="appointmentSuccess" component={AppointmentSuccess} options={{ headerShown: false }} />
+        <Stack.Screen name="appointmentDetail" component={AppointmentDetail} options={{ headerShown: false }} />
+        <Stack.Screen name="videoCall" component={VideoCall} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );
